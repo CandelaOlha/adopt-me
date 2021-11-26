@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reusable code */
+
+$title-font: "Libre Baskerville", serif;
+$text-font: "Source Sans Pro", sans-serif;
+$primary-color: #fff4bd;
+$dark-color: #2c2c2c;
+$light-color: #fff;
+
+@mixin container {
+  display: flex;
+  max-width: 1196px;
+  width: 100%;
+}
+
+@mixin cta {
+  border-radius: 10px;
+  background-color: $primary-color;
+  color: $dark-color;
+  font-family: $text-font;
+  font-weight: 600;
+  padding: 16px 32px;
+  size: 18px;
+  text-decoration: none;
+}
+
+/* Header styles */
+
+header {
+  align-items: center;
+  background-image: url("../adopt-me/images/background-image.jpg");
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 40px;
+  .header-container {
+    @include container;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .navbar {
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      .brand-name {
+        color: $light-color;
+        font-family: "Spartan", sans-serif;
+        font-size: 25px;
+      }
+      .menu {
+        display: flex;
+        .menu-item {
+          font-family: $text-font;
+          list-style-type: none;
+          margin: 0 20px;
+          .menu-link {
+            color: $light-color;
+            font-size: 18px;
+            text-decoration: none;
+          }
+        }
+      }
+      .search-button {
+        background-color: $light-color;
+        border: none;
+        border-radius: 50%;
+        color: $dark-color;
+        padding: 16px;
+      }
+    }
+    .header-text-container {
+      flex-direction: column;
+      .title {
+        color: $light-color;
+        font-family: $title-font;
+        font-size: 70px;
+        line-height: 1;
+        margin-bottom: 60px;
+        max-width: 600px;
+        width: 100%;
+      }
+      .cta {
+        @include cta;
+      }
+    }
+    .header-icons {
+      display: flex;
+      justify-content: flex-start;
+      i {
+        color: $light-color;
+        font-size: 25px;
+        margin: 20px 10px;
+      }
+    }
+  }
+}
