@@ -16,6 +16,7 @@ header {
 }
 header .header-container {
   display: flex;
+  flex-direction: column;
   max-width: 1196px;
   width: 100%;
   flex-direction: column;
@@ -129,6 +130,66 @@ header .header-container .header-icons i {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+}
+
+/* Pet section styles */
+.pet-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 120px 40px;
+}
+.pet-section .section-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1196px;
+  width: 100%;
+  align-items: center;
+}
+.pet-section .section-container .title {
+  color: #2c2c2c;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.pet-section .section-container .title span {
+  background-image: linear-gradient(#fff4bd, #fff4bd);
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+}
+.pet-section .section-container .pet-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pet-section .section-container .pet-gallery .pet {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  max-width: calc(33.3333333333% - 60px);
+}
+.pet-section .section-container .pet-gallery .pet .pet-image {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.pet-section .section-container .pet-gallery .pet .pet-name {
+  color: #2c2c2c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.pet-section .section-container .cta {
+  border-radius: 10px;
+  background-color: #fff4bd;
+  color: #2c2c2c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  padding: 16px 32px;
+  size: 18px;
+  text-decoration: none;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

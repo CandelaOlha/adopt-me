@@ -21,6 +21,7 @@ $light-color: #fff;
 
 @mixin container {
   display: flex;
+  flex-direction: column;
   max-width: 1196px;
   width: 100%;
 }
@@ -149,6 +150,44 @@ header {
     }
     .cta {
       @include cta();
+    }
+  }
+}
+
+/* Pet section styles */
+
+.pet-section {
+  @include section;
+  .section-container {
+    @include container;
+    align-items: center;
+    .title {
+      @include title();
+    }
+    .pet-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      .pet {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        max-width: calc(100% / 3 - (30px * 2));
+        .pet-image {
+          border-radius: 10px;
+          margin-bottom: 20px;
+        }
+        .pet-name {
+          color: $dark-color;
+          font-family: $text-font;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+    .cta {
+      @include cta();
+      margin-top: 30px;
     }
   }
 }
