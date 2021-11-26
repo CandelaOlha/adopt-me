@@ -133,6 +133,7 @@ header {
 
 .about-section {
   @include section;
+  background-color: #f5f6f7;
   .section-container {
     flex-direction: column;
     max-width: 800px;

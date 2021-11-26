@@ -92,6 +92,7 @@ header .header-container .header-icons i {
   display: flex;
   justify-content: center;
   padding: 120px 40px;
+  background-color: #f5f6f7;
 }
 .about-section .section-container {
   flex-direction: column;
