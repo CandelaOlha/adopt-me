@@ -12,10 +12,37 @@ $primary-color: #fff4bd;
 $dark-color: #2c2c2c;
 $light-color: #fff;
 
+@mixin section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 120px 40px;
+}
+
 @mixin container {
   display: flex;
   max-width: 1196px;
   width: 100%;
+}
+
+@mixin title($color: $dark-color) {
+  font-family: $title-font;
+  line-height: 1.2;
+  font-size: 40px;
+  margin-bottom: 40px;
+  span {
+    background-image: linear-gradient(rgb(255, 244, 189), rgb(255, 244, 189));
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 0 80%;
+  }
+}
+
+@mixin text($color: $dark-color) {
+  font-family: $text-font;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
 @mixin cta {
@@ -98,6 +125,27 @@ header {
         font-size: 25px;
         margin: 20px 10px;
       }
+    }
+  }
+}
+
+/* About section styles */
+
+.about-section {
+  @include section;
+  .section-container {
+    flex-direction: column;
+    max-width: 800px;
+    text-align: center;
+    width: 100%;
+    .title {
+      @include title($dark-color);
+    }
+    .description {
+      @include text($dark-color);
+    }
+    .cta {
+      @include cta;
     }
   }
 }
