@@ -101,6 +101,7 @@ header .header-container .header-icons i {
   width: 100%;
 }
 .about-section .section-container .title {
+  color: #2c2c2c;
   font-family: "Libre Baskerville", serif;
   line-height: 1.2;
   font-size: 40px;
@@ -110,13 +111,14 @@ header .header-container .header-icons i {
   background-image: linear-gradient(#fff4bd, #fff4bd);
   background-size: 100% 10px;
   background-repeat: no-repeat;
-  background-position: 0 80%;
+  background-position: 0 90%;
 }
 .about-section .section-container .description {
+  color: #2c2c2c;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.8;
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .about-section .section-container .cta {
   border-radius: 10px;

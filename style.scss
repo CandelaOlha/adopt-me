@@ -25,7 +25,8 @@ $light-color: #fff;
   width: 100%;
 }
 
-@mixin title($color: $dark-color) {
+@mixin title($title-color: $dark-color) {
+  color: $title-color;
   font-family: $title-font;
   line-height: 1.2;
   font-size: 40px;
@@ -34,21 +35,22 @@ $light-color: #fff;
     background-image: linear-gradient(rgb(255, 244, 189), rgb(255, 244, 189));
     background-size: 100% 10px;
     background-repeat: no-repeat;
-    background-position: 0 80%;
+    background-position: 0 90%;
   }
 }
 
-@mixin text($color: $dark-color) {
+@mixin text($text-color: $dark-color) {
+  color: $text-color;
   font-family: $text-font;
   line-height: 1.8;
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
-@mixin cta {
+@mixin cta($background-color: $primary-color, $text-color: $dark-color) {
   border-radius: 10px;
-  background-color: $primary-color;
-  color: $dark-color;
+  background-color: $background-color;
+  color: $text-color;
   font-family: $text-font;
   font-weight: 600;
   padding: 16px 32px;
@@ -114,7 +116,7 @@ header {
         width: 100%;
       }
       .cta {
-        @include cta;
+        @include cta();
       }
     }
     .header-icons {
@@ -140,13 +142,13 @@ header {
     text-align: center;
     width: 100%;
     .title {
-      @include title($dark-color);
+      @include title();
     }
     .description {
-      @include text($dark-color);
+      @include text();
     }
     .cta {
-      @include cta;
+      @include cta();
     }
   }
 }
