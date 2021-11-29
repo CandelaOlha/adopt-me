@@ -169,7 +169,6 @@ header {
   @include section();
   .section-container {
     @include container();
-    align-items: center;
     .title {
       @include title();
     }
@@ -209,7 +208,6 @@ header {
   border-left: 60px solid $light-color;
   .section-container {
     @include container($flex-direction: row);
-    align-items: center;
     .slider-control {
       color: $light-color;
       height: 70px;
@@ -311,12 +309,7 @@ footer {
   background-color: $grey-color;
   flex-direction: column;
   .footer-container {
-    align-items: flex-start;
-    color: $light-color;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1196px;
-    width: 100%;
+    @include container($align-items: flex-start, $flex-direction: row);
     .footer-column {
       margin: 40px 0;
       max-width: 300px;
@@ -339,8 +332,8 @@ footer {
         @include text($text-color: $light-color, $margin-bottom: 0);
         text-decoration: none;
       }
-      .contact-box {
-        margin-bottom: 20px;
+      .contact-box:nth-child(3) {
+        margin: 20px 0;
       }
     }
     .footer-social-media-list {
@@ -355,12 +348,8 @@ footer {
     }
   }
   .credits-container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    max-width: 1196px;
-    padding: 20px;
-    width: 100%;
+    @include container($flex-direction: row);
+    padding: 20px 0;
     .credits {
       @include text($text-color: $light-color, $margin-bottom: 0);
     }
