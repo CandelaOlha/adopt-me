@@ -25,10 +25,16 @@ $grey-color: #5b616a;
   padding: $padding;
 }
 
-@mixin container($flex-direction: column) {
+@mixin container(
+  $align-items: center,
+  $flex-direction: column,
+  $max-width: 1196px
+) {
+  align-items: $align-items;
   display: flex;
   flex-direction: $flex-direction;
-  max-width: 1196px;
+  justify-content: space-between;
+  max-width: $max-width;
   width: 100%;
 }
 
@@ -46,7 +52,7 @@ $grey-color: #5b616a;
   }
 }
 
-@mixin text($text-color: $dark-color, $font-size: 18px, $margin-bottom: 60px) {
+@mixin text($font-size: 18px, $margin-bottom: 60px, $text-color: $dark-color) {
   color: $text-color;
   font-family: $text-font;
   font-size: $font-size;
@@ -75,8 +81,7 @@ header {
   justify-content: center;
   padding: 0 40px;
   .header-container {
-    @include container();
-    flex-direction: column;
+    @include container($align-items: stretch);
     height: 100%;
     justify-content: space-between;
     .navbar {
@@ -144,10 +149,8 @@ header {
   @include section();
   background-color: #f5f6f7;
   .section-container {
-    flex-direction: column;
-    max-width: 800px;
+    @include container($max-width: 800px);
     text-align: center;
-    width: 100%;
     .title {
       @include title();
     }
@@ -207,7 +210,6 @@ header {
   .section-container {
     @include container($flex-direction: row);
     align-items: center;
-    justify-content: space-between;
     .slider-control {
       color: $light-color;
       height: 70px;
@@ -229,10 +231,10 @@ header {
         text-transform: uppercase;
       }
       .story-title {
-        @include title($light-color);
+        @include title($title-color: $light-color);
       }
       .description {
-        @include text($light-color);
+        @include text($text-color: $light-color);
       }
       .cta {
         @include cta();
@@ -254,12 +256,8 @@ header {
 .testimonials-section {
   @include section();
   .section-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 510px;
+    @include container($max-width: 510px);
     text-align: center;
-    width: 100%;
     .quote-icon {
       color: $secondary-color;
       height: 64px;
@@ -320,6 +318,7 @@ footer {
     max-width: 1196px;
     width: 100%;
     .footer-column {
+      margin: 40px 0;
       max-width: 300px;
       .footer-column-title {
         @include text(

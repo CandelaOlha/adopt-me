@@ -19,11 +19,12 @@ header {
   padding: 0 40px;
 }
 header .header-container {
+  align-items: stretch;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 1196px;
   width: 100%;
-  flex-direction: column;
   height: 100%;
   justify-content: space-between;
 }
@@ -100,10 +101,13 @@ header .header-container .header-icons i {
   background-color: #f5f6f7;
 }
 .about-section .section-container {
+  align-items: center;
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 800px;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 .about-section .section-container .title {
   color: #2c2c2c;
@@ -144,8 +148,10 @@ header .header-container .header-icons i {
   padding: 120px 40px;
 }
 .pet-section .section-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 1196px;
   width: 100%;
   align-items: center;
@@ -206,12 +212,13 @@ header .header-container .header-icons i {
   border-left: 60px solid #fff;
 }
 .stories-section .section-container {
+  align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   max-width: 1196px;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
 }
 .stories-section .section-container .slider-control {
   color: #fff;
@@ -284,9 +291,10 @@ header .header-container .header-icons i {
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   max-width: 510px;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 .testimonials-section .section-container .quote-icon {
   color: #afc1d6;
@@ -377,6 +385,7 @@ footer .footer-container {
   width: 100%;
 }
 footer .footer-container .footer-column {
+  margin: 40px 0;
   max-width: 300px;
 }
 footer .footer-container .footer-column .footer-column-title {
