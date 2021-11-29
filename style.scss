@@ -42,12 +42,12 @@ $grey-color: #5b616a;
   }
 }
 
-@mixin text($text-color: $dark-color) {
+@mixin text($text-color: $dark-color, $margin-bottom: 60px) {
   color: $text-color;
   font-family: $text-font;
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 60px;
+  margin-bottom: $margin-bottom;
 }
 
 @mixin cta($background-color: $primary-color, $text-color: $dark-color) {
@@ -240,6 +240,48 @@ header {
         border-radius: 10px;
         max-width: 486px;
         width: 100%;
+      }
+    }
+  }
+}
+
+/* Testimonials section styles */
+
+.testimonials-section {
+  @include section();
+  .section-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 510px;
+    text-align: center;
+    width: 100%;
+    .quote-icon {
+      color: $secondary-color;
+      height: 64px;
+      margin-bottom: 40px;
+      width: 64px;
+    }
+    .testimonial-text {
+      @include text($margin-bottom: 40px);
+    }
+    .testimonial-author {
+      @include text($margin-bottom: 20px);
+      font-weight: bold;
+    }
+    .testimonials-slider {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 70px;
+      .circle {
+        background-color: #2c2c2c80;
+        border-radius: 50px;
+        height: 12px;
+        width: 12px;
+      }
+      .active-circle {
+        background-color: $dark-color;
       }
     }
   }

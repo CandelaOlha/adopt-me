@@ -269,4 +269,56 @@ header .header-container .header-icons i {
   width: 100%;
 }
 
+/* Testimonials section styles */
+.testimonials-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 120px 40px;
+}
+.testimonials-section .section-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 510px;
+  text-align: center;
+  width: 100%;
+}
+.testimonials-section .section-container .quote-icon {
+  color: #afc1d6;
+  height: 64px;
+  margin-bottom: 40px;
+  width: 64px;
+}
+.testimonials-section .section-container .testimonial-text {
+  color: #2c2c2c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.testimonials-section .section-container .testimonial-author {
+  color: #2c2c2c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.testimonials-section .section-container .testimonials-slider {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
+}
+.testimonials-section .section-container .testimonials-slider .circle {
+  background-color: #2c2c2c80;
+  border-radius: 50px;
+  height: 12px;
+  width: 12px;
+}
+.testimonials-section .section-container .testimonials-slider .active-circle {
+  background-color: #2c2c2c;
+}
+
 /*# sourceMappingURL=style.css.map */
