@@ -286,3 +286,18 @@ header {
     }
   }
 }
+
+/* CTA section styles */
+
+.cta-section {
+  @include section();
+  background-color: $secondary-color;
+  flex-direction: column;
+  text-align: center;
+  .title {
+    @include title($light-color);
+  }
+  .cta {
+    @include cta();
+  }
+}
