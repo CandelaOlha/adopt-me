@@ -14,11 +14,11 @@ $dark-color: #2c2c2c;
 $light-color: #fff;
 $grey-color: #5b616a;
 
-@mixin section {
+@mixin section($padding: 120px 40px) {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 120px 40px;
+  padding: $padding;
 }
 
 @mixin container($flex-direction: column) {
@@ -42,10 +42,10 @@ $grey-color: #5b616a;
   }
 }
 
-@mixin text($text-color: $dark-color, $margin-bottom: 60px) {
+@mixin text($text-color: $dark-color, $font-size: 18px, $margin-bottom: 60px) {
   color: $text-color;
   font-family: $text-font;
-  font-size: 18px;
+  font-size: $font-size;
   line-height: 1.8;
   margin-bottom: $margin-bottom;
 }
@@ -299,5 +299,76 @@ header {
   }
   .cta {
     @include cta();
+  }
+}
+
+/* Footer styles */
+
+footer {
+  @include section($padding: 120px 40px 20px 40px);
+  background-color: $grey-color;
+  flex-direction: column;
+  .footer-container {
+    align-items: flex-start;
+    color: $light-color;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1196px;
+    width: 100%;
+    .footer-column {
+      max-width: 300px;
+      .footer-column-title {
+        @include text(
+          $text-color: $light-color,
+          $font-size: 20px,
+          $margin-bottom: 10px
+        );
+        font-weight: 600;
+      }
+      .footer-column-subtitle {
+        @include text($text-color: $light-color, $margin-bottom: 0);
+        font-weight: 600;
+      }
+      .footer-column-text {
+        @include text($text-color: $light-color, $margin-bottom: 0);
+      }
+      .footer-column-link {
+        @include text($text-color: $light-color, $margin-bottom: 0);
+        text-decoration: none;
+      }
+      .contact-box {
+        margin-bottom: 20px;
+      }
+    }
+    .footer-social-media-list {
+      .social-media-item {
+        list-style-type: none;
+        margin-bottom: 10px;
+        .footer-social-media-link {
+          @include text($text-color: $light-color);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .credits-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1196px;
+    padding: 20px;
+    width: 100%;
+    .credits {
+      @include text($text-color: $light-color, $margin-bottom: 0);
+    }
+    .back-to-top-icon {
+      .back-to-top-image {
+        color: $light-color;
+        font-size: 70px;
+        height: 70px;
+        transform: rotate(-90deg);
+        width: 70px;
+      }
+    }
   }
 }

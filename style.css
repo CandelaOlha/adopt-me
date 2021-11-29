@@ -355,4 +355,93 @@ header .header-container .header-icons i {
   text-decoration: none;
 }
 
+/* Footer styles */
+footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 120px 40px 20px 40px;
+  background-color: #5b616a;
+  flex-direction: column;
+}
+footer .footer-container {
+  align-items: flex-start;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1196px;
+  width: 100%;
+}
+footer .footer-container .footer-column {
+  max-width: 300px;
+}
+footer .footer-container .footer-column .footer-column-title {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+footer .footer-container .footer-column .footer-column-subtitle {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+footer .footer-container .footer-column .footer-column-text {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+footer .footer-container .footer-column .footer-column-link {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+footer .footer-container .footer-column .contact-box {
+  margin-bottom: 20px;
+}
+footer .footer-container .footer-social-media-list .social-media-item {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+footer .footer-container .footer-social-media-list .social-media-item .footer-social-media-link {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 60px;
+  text-decoration: none;
+}
+footer .credits-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1196px;
+  padding: 20px;
+  width: 100%;
+}
+footer .credits-container .credits {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+footer .credits-container .back-to-top-icon .back-to-top-image {
+  color: #fff;
+  font-size: 70px;
+  height: 70px;
+  transform: rotate(-90deg);
+  width: 70px;
+}
+
 /*# sourceMappingURL=style.css.map */
