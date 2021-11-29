@@ -9,8 +9,10 @@
 $title-font: "Libre Baskerville", serif;
 $text-font: "Source Sans Pro", sans-serif;
 $primary-color: #fff4bd;
+$secondary-color: #afc1d6;
 $dark-color: #2c2c2c;
 $light-color: #fff;
+$grey-color: #5b616a;
 
 @mixin section {
   align-items: center;
@@ -19,9 +21,9 @@ $light-color: #fff;
   padding: 120px 40px;
 }
 
-@mixin container {
+@mixin container($flex-direction: column) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $flex-direction;
   max-width: 1196px;
   width: 100%;
 }
@@ -29,28 +31,28 @@ $light-color: #fff;
 @mixin title($title-color: $dark-color) {
   color: $title-color;
   font-family: $title-font;
-  line-height: 1.2;
   font-size: 40px;
+  line-height: 1.2;
   margin-bottom: 40px;
   span {
     background-image: linear-gradient(rgb(255, 244, 189), rgb(255, 244, 189));
-    background-size: 100% 10px;
-    background-repeat: no-repeat;
     background-position: 0 90%;
+    background-repeat: no-repeat;
+    background-size: 100% 10px;
   }
 }
 
 @mixin text($text-color: $dark-color) {
   color: $text-color;
   font-family: $text-font;
-  line-height: 1.8;
   font-size: 18px;
+  line-height: 1.8;
   margin-bottom: 60px;
 }
 
 @mixin cta($background-color: $primary-color, $text-color: $dark-color) {
-  border-radius: 10px;
   background-color: $background-color;
+  border-radius: 10px;
   color: $text-color;
   font-family: $text-font;
   font-weight: 600;
@@ -65,14 +67,14 @@ header {
   align-items: center;
   background-image: url("../adopt-me/images/background-image.jpg");
   display: flex;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   padding: 0 40px;
   .header-container {
-    @include container;
+    @include container();
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
+    justify-content: space-between;
     .navbar {
       align-items: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -135,7 +137,7 @@ header {
 /* About section styles */
 
 .about-section {
-  @include section;
+  @include section();
   background-color: #f5f6f7;
   .section-container {
     flex-direction: column;
@@ -157,9 +159,9 @@ header {
 /* Pet section styles */
 
 .pet-section {
-  @include section;
+  @include section();
   .section-container {
-    @include container;
+    @include container();
     align-items: center;
     .title {
       @include title();
@@ -188,6 +190,57 @@ header {
     .cta {
       @include cta();
       margin-top: 30px;
+    }
+  }
+}
+
+/* Stories section styles */
+
+.stories-section {
+  @include section();
+  background-color: $grey-color;
+  border-left: 60px solid $light-color;
+  .section-container {
+    @include container($flex-direction: row);
+    align-items: center;
+    justify-content: space-between;
+    .slider-control {
+      color: $light-color;
+      height: 70px;
+      width: 70px;
+    }
+    .left-slider-control {
+      transform: rotate(180deg);
+    }
+    .story-text-container {
+      margin: 10px;
+      width: 460px;
+      .section-title {
+        color: $light-color;
+        font-family: $text-font;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .story-title {
+        @include title($light-color);
+      }
+      .description {
+        @include text($light-color);
+      }
+      .cta {
+        @include cta();
+      }
+    }
+    .story-image-container {
+      margin: 10px;
+      .story-image {
+        border-radius: 10px;
+        max-width: 486px;
+        width: 100%;
+      }
     }
   }
 }

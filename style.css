@@ -10,8 +10,8 @@ header {
   align-items: center;
   background-image: url("../adopt-me/images/background-image.jpg");
   display: flex;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
   padding: 0 40px;
 }
 header .header-container {
@@ -20,8 +20,8 @@ header .header-container {
   max-width: 1196px;
   width: 100%;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  justify-content: space-between;
 }
 header .header-container .navbar {
   align-items: center;
@@ -68,8 +68,8 @@ header .header-container .header-text-container .title {
   width: 100%;
 }
 header .header-container .header-text-container .cta {
-  border-radius: 10px;
   background-color: #fff4bd;
+  border-radius: 10px;
   color: #2c2c2c;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -104,26 +104,26 @@ header .header-container .header-icons i {
 .about-section .section-container .title {
   color: #2c2c2c;
   font-family: "Libre Baskerville", serif;
-  line-height: 1.2;
   font-size: 40px;
+  line-height: 1.2;
   margin-bottom: 40px;
 }
 .about-section .section-container .title span {
   background-image: linear-gradient(#fff4bd, #fff4bd);
-  background-size: 100% 10px;
-  background-repeat: no-repeat;
   background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
 }
 .about-section .section-container .description {
   color: #2c2c2c;
   font-family: "Source Sans Pro", sans-serif;
-  line-height: 1.8;
   font-size: 18px;
+  line-height: 1.8;
   margin-bottom: 60px;
 }
 .about-section .section-container .cta {
-  border-radius: 10px;
   background-color: #fff4bd;
+  border-radius: 10px;
   color: #2c2c2c;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -149,15 +149,15 @@ header .header-container .header-icons i {
 .pet-section .section-container .title {
   color: #2c2c2c;
   font-family: "Libre Baskerville", serif;
-  line-height: 1.2;
   font-size: 40px;
+  line-height: 1.2;
   margin-bottom: 40px;
 }
 .pet-section .section-container .title span {
   background-image: linear-gradient(#fff4bd, #fff4bd);
-  background-size: 100% 10px;
-  background-repeat: no-repeat;
   background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
 }
 .pet-section .section-container .pet-gallery {
   display: flex;
@@ -181,8 +181,8 @@ header .header-container .header-icons i {
   font-weight: 600;
 }
 .pet-section .section-container .cta {
-  border-radius: 10px;
   background-color: #fff4bd;
+  border-radius: 10px;
   color: #2c2c2c;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
@@ -190,6 +190,83 @@ header .header-container .header-icons i {
   size: 18px;
   text-decoration: none;
   margin-top: 30px;
+}
+
+/* Stories section styles */
+.stories-section {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 120px 40px;
+  background-color: #5b616a;
+  border-left: 60px solid #fff;
+}
+.stories-section .section-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1196px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.stories-section .section-container .slider-control {
+  color: #fff;
+  height: 70px;
+  width: 70px;
+}
+.stories-section .section-container .left-slider-control {
+  transform: rotate(180deg);
+}
+.stories-section .section-container .story-text-container {
+  margin: 10px;
+  width: 460px;
+}
+.stories-section .section-container .story-text-container .section-title {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.stories-section .section-container .story-text-container .story-title {
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.stories-section .section-container .story-text-container .story-title span {
+  background-image: linear-gradient(#fff4bd, #fff4bd);
+  background-position: 0 90%;
+  background-repeat: no-repeat;
+  background-size: 100% 10px;
+}
+.stories-section .section-container .story-text-container .description {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+.stories-section .section-container .story-text-container .cta {
+  background-color: #fff4bd;
+  border-radius: 10px;
+  color: #2c2c2c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  padding: 16px 32px;
+  size: 18px;
+  text-decoration: none;
+}
+.stories-section .section-container .story-image-container {
+  margin: 10px;
+}
+.stories-section .section-container .story-image-container .story-image {
+  border-radius: 10px;
+  max-width: 486px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
