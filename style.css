@@ -52,6 +52,10 @@ header .header-container .navbar .menu .menu-item .menu-link {
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+}
+header .header-container .navbar .menu .menu-item .menu-link:hover {
+  color: #2c2c2c;
 }
 header .header-container .navbar .search-button {
   background-color: #fff;
@@ -81,15 +85,27 @@ header .header-container .header-text-container .cta {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+}
+header .header-container .header-text-container .cta:hover {
+  background-color: #5b616a;
+  color: #fff;
 }
 header .header-container .header-icons {
   display: flex;
   justify-content: flex-start;
 }
-header .header-container .header-icons i {
+header .header-container .header-icons .header-icon-item {
+  list-style-type: none;
+}
+header .header-container .header-icons .header-icon-item i {
   color: #fff;
   font-size: 25px;
   margin: 20px 10px;
+  transition: 0.1s;
+}
+header .header-container .header-icons .header-icon-item i:hover {
+  color: #2c2c2c;
 }
 
 /* About section styles */
@@ -138,6 +154,11 @@ header .header-container .header-icons i {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+}
+.about-section .section-container .cta:hover {
+  background-color: #5b616a;
+  color: #fff;
 }
 
 /* Pet section styles */
@@ -198,7 +219,12 @@ header .header-container .header-icons i {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
   margin-top: 30px;
+}
+.pet-section .section-container .cta:hover {
+  background-color: #5b616a;
+  color: #fff;
 }
 
 /* Stories section styles */
@@ -268,6 +294,11 @@ header .header-container .header-icons i {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+}
+.stories-section .section-container .story-text-container .cta:hover {
+  background-color: #fff0a8;
+  color: #2c2c2c;
 }
 .stories-section .section-container .story-image-container {
   margin: 10px;
@@ -363,6 +394,11 @@ header .header-container .header-icons i {
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+}
+.cta-section .cta:hover {
+  background-color: #5b616a;
+  color: #fff;
 }
 
 /* Footer styles */
@@ -416,6 +452,10 @@ footer .footer-container .footer-column .footer-column-link {
   line-height: 1.8;
   margin-bottom: 0;
   text-decoration: none;
+  transition: 0.1s;
+}
+footer .footer-container .footer-column .footer-column-link:hover {
+  border-bottom: 1px solid #fff;
 }
 footer .footer-container .footer-column .contact-box:nth-child(3) {
   margin: 20px 0;
@@ -431,6 +471,10 @@ footer .footer-container .footer-social-media-list .social-media-item .footer-so
   line-height: 1.8;
   margin-bottom: 60px;
   text-decoration: none;
+  transition: 0.1s;
+}
+footer .footer-container .footer-social-media-list .social-media-item .footer-social-media-link:hover {
+  border-bottom: 1px solid #fff;
 }
 footer .credits-container {
   align-items: center;

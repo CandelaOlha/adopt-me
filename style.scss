@@ -13,6 +13,7 @@ html {
 $title-font: "Libre Baskerville", serif;
 $text-font: "Source Sans Pro", sans-serif;
 $primary-color: #fff4bd;
+$stronger-primary-color: #fff0a8;
 $secondary-color: #afc1d6;
 $dark-color: #2c2c2c;
 $light-color: #fff;
@@ -60,7 +61,12 @@ $grey-color: #5b616a;
   margin-bottom: $margin-bottom;
 }
 
-@mixin cta($background-color: $primary-color, $text-color: $dark-color) {
+@mixin cta(
+  $background-color: $primary-color,
+  $hover-background-color: $grey-color,
+  $hover-color: $light-color,
+  $text-color: $dark-color
+) {
   background-color: $background-color;
   border-radius: 10px;
   color: $text-color;
@@ -69,6 +75,11 @@ $grey-color: #5b616a;
   padding: 16px 32px;
   size: 18px;
   text-decoration: none;
+  transition: 0.1s;
+  &:hover {
+    background-color: $hover-background-color;
+    color: $hover-color;
+  }
 }
 
 /* Header styles */
@@ -105,6 +116,10 @@ header {
             color: $light-color;
             font-size: 18px;
             text-decoration: none;
+            transition: 0.1s;
+          }
+          .menu-link:hover {
+            color: $dark-color;
           }
         }
       }
@@ -134,10 +149,17 @@ header {
     .header-icons {
       display: flex;
       justify-content: flex-start;
-      i {
-        color: $light-color;
-        font-size: 25px;
-        margin: 20px 10px;
+      .header-icon-item {
+        list-style-type: none;
+        i {
+          color: $light-color;
+          font-size: 25px;
+          margin: 20px 10px;
+          transition: 0.1s;
+        }
+        i:hover {
+          color: $dark-color;
+        }
       }
     }
   }
@@ -235,7 +257,10 @@ header {
         @include text($text-color: $light-color);
       }
       .cta {
-        @include cta();
+        @include cta(
+          $hover-background-color: $stronger-primary-color,
+          $hover-color: $dark-color
+        );
       }
     }
     .story-image-container {
@@ -331,6 +356,10 @@ footer {
       .footer-column-link {
         @include text($text-color: $light-color, $margin-bottom: 0);
         text-decoration: none;
+        transition: 0.1s;
+      }
+      .footer-column-link:hover {
+        border-bottom: 1px solid $light-color;
       }
       .contact-box:nth-child(3) {
         margin: 20px 0;
@@ -343,6 +372,10 @@ footer {
         .footer-social-media-link {
           @include text($text-color: $light-color);
           text-decoration: none;
+          transition: 0.1s;
+        }
+        .footer-social-media-link:hover {
+          border-bottom: 1px solid $light-color;
         }
       }
     }
