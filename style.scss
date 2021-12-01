@@ -29,13 +29,15 @@ $grey-color: #5b616a;
 @mixin container(
   $align-items: center,
   $flex-direction: column,
-  $max-width: 1196px
+  $max-width: 1196px,
+  $text-align: center
 ) {
   align-items: $align-items;
   display: flex;
   flex-direction: $flex-direction;
   justify-content: space-between;
   max-width: $max-width;
+  text-align: $text-align;
   width: 100%;
 }
 
@@ -87,12 +89,13 @@ $grey-color: #5b616a;
 header {
   align-items: center;
   background-image: url("../adopt-me/images/background-image.jpg");
+  background-position: center;
   display: flex;
   height: 100vh;
   justify-content: center;
   padding: 0 40px;
   .header-container {
-    @include container($align-items: stretch);
+    @include container($align-items: stretch, $text-align: left);
     height: 100%;
     .navbar {
       align-items: center;
@@ -171,7 +174,6 @@ header {
   background-color: #f5f6f7;
   .section-container {
     @include container($max-width: 800px);
-    text-align: center;
     .title {
       @include title();
     }
@@ -196,6 +198,7 @@ header {
     .pet-gallery {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       .pet {
         align-items: center;
         display: flex;
@@ -229,7 +232,7 @@ header {
   background-color: $grey-color;
   border-left: 60px solid $light-color;
   .section-container {
-    @include container($flex-direction: row);
+    @include container($flex-direction: row, $text-align: left);
     .slider-control {
       color: $light-color;
       height: 70px;
@@ -341,7 +344,11 @@ footer {
   background-color: $grey-color;
   flex-direction: column;
   .footer-container {
-    @include container($align-items: flex-start, $flex-direction: row);
+    @include container(
+      $align-items: flex-start,
+      $flex-direction: row,
+      $text-align: left
+    );
     .footer-column {
       margin: 40px 0;
       max-width: 300px;
@@ -391,15 +398,102 @@ footer {
     @include container($flex-direction: row);
     padding: 20px 0;
     .credits {
-      @include text($text-color: $light-color, $margin-bottom: 0);
+      @include text(
+        $font-size: 16px,
+        $text-color: $light-color,
+        $margin-bottom: 0
+      );
     }
     .back-to-top-icon {
-      .back-to-top-image {
+      img {
         color: $light-color;
-        font-size: 70px;
         height: 70px;
         transform: rotate(-90deg);
         width: 70px;
+      }
+    }
+  }
+}
+
+/* Responsive styles */
+
+@media screen and (max-width: 960px) {
+  .stories-section {
+    .section-container {
+      .story-container {
+        .story-text-container {
+          margin-bottom: 60px;
+          width: 100%;
+        }
+        .story-image-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    .footer-container {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  header {
+    .header-container {
+      .navbar {
+        .menu {
+          display: none;
+        }
+        .search-button {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .pet-section {
+    .section-container {
+      .pet-gallery {
+        .pet {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .stories-section {
+    border: none;
+    .section-container {
+      .slider-control {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  header {
+    .header-container {
+      .header-text-container {
+        .title {
+          font-size: 60px;
+          line-height: 1.1;
+        }
+      }
+    }
+  }
+  footer {
+    .credits-container {
+      .back-to-top-icon {
+        img {
+          height: 50px;
+          width: 50px;
+        }
       }
     }
   }

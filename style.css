@@ -13,6 +13,7 @@ html {
 header {
   align-items: center;
   background-image: url("../adopt-me/images/background-image.jpg");
+  background-position: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -24,6 +25,7 @@ header .header-container {
   flex-direction: column;
   justify-content: space-between;
   max-width: 1196px;
+  text-align: left;
   width: 100%;
   height: 100%;
 }
@@ -121,8 +123,8 @@ header .header-container .header-icons .header-icon-item i:hover {
   flex-direction: column;
   justify-content: space-between;
   max-width: 800px;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 .about-section .section-container .title {
   color: #2c2c2c;
@@ -173,6 +175,7 @@ header .header-container .header-icons .header-icon-item i:hover {
   flex-direction: column;
   justify-content: space-between;
   max-width: 1196px;
+  text-align: center;
   width: 100%;
 }
 .pet-section .section-container .title {
@@ -191,6 +194,7 @@ header .header-container .header-icons .header-icon-item i:hover {
 .pet-section .section-container .pet-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .pet-section .section-container .pet-gallery .pet {
   align-items: center;
@@ -242,6 +246,7 @@ header .header-container .header-icons .header-icon-item i:hover {
   flex-direction: row;
   justify-content: space-between;
   max-width: 1196px;
+  text-align: left;
   width: 100%;
 }
 .stories-section .section-container .slider-control {
@@ -329,6 +334,7 @@ header .header-container .header-icons .header-icon-item i:hover {
   flex-direction: column;
   justify-content: space-between;
   max-width: 510px;
+  text-align: center;
   width: 100%;
   text-align: center;
 }
@@ -423,6 +429,7 @@ footer .footer-container {
   flex-direction: row;
   justify-content: space-between;
   max-width: 1196px;
+  text-align: left;
   width: 100%;
 }
 footer .footer-container .footer-column {
@@ -489,22 +496,69 @@ footer .credits-container {
   flex-direction: row;
   justify-content: space-between;
   max-width: 1196px;
+  text-align: center;
   width: 100%;
   padding: 20px 0;
 }
 footer .credits-container .credits {
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 0;
 }
-footer .credits-container .back-to-top-icon .back-to-top-image {
+footer .credits-container .back-to-top-icon img {
   color: #fff;
-  font-size: 70px;
   height: 70px;
   transform: rotate(-90deg);
   width: 70px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 960px) {
+  .stories-section .section-container .story-container .story-text-container {
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  .stories-section .section-container .story-container .story-image-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer .footer-container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 870px) {
+  header .header-container .navbar .menu {
+    display: none;
+  }
+  header .header-container .navbar .search-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .pet-section .section-container .pet-gallery .pet {
+    max-width: 100%;
+  }
+
+  .stories-section {
+    border: none;
+  }
+  .stories-section .section-container .slider-control {
+    display: none;
+  }
+}
+@media screen and (max-width: 468px) {
+  header .header-container .header-text-container .title {
+    font-size: 60px;
+    line-height: 1.1;
+  }
+
+  footer .credits-container .back-to-top-icon img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
