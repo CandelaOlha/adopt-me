@@ -202,6 +202,7 @@ header .header-container .header-icons .header-icon-item i:hover {
 .pet-section .section-container .pet-gallery .pet .pet-image {
   border-radius: 10px;
   margin-bottom: 20px;
+  max-width: 100%;
 }
 .pet-section .section-container .pet-gallery .pet .pet-name {
   color: #2c2c2c;
