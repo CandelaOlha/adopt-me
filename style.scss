@@ -281,6 +281,21 @@ header {
         }
       }
     }
+    .mobile-slider {
+      align-items: center;
+      display: none;
+      justify-content: space-between;
+      margin-top: 20px;
+      .slider-control {
+        color: $light-color;
+        height: 50px;
+        margin: 0 10px;
+        width: 50px;
+      }
+      .left-slider-control {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
@@ -421,6 +436,7 @@ footer {
   .stories-section {
     .section-container {
       .story-container {
+        margin: 0;
         .story-text-container {
           margin-bottom: 60px;
           width: 100%;
@@ -461,6 +477,7 @@ footer {
     .section-container {
       .pet-gallery {
         .pet {
+          margin: 30px 0;
           max-width: 100%;
         }
       }
@@ -469,8 +486,15 @@ footer {
   .stories-section {
     border: none;
     .section-container {
+      flex-direction: column;
       .slider-control {
         display: none;
+      }
+      .mobile-slider {
+        display: flex;
+        .slider-control {
+          display: flex;
+        }
       }
     }
   }
