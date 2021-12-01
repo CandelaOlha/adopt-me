@@ -17,6 +17,7 @@ header {
   display: flex;
   height: 100vh;
   justify-content: center;
+  max-height: -webkit-fill-available;
   padding: 0 40px;
 }
 header .header-container {

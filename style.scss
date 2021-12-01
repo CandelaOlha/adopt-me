@@ -94,6 +94,7 @@ header {
   display: flex;
   height: 100vh;
   justify-content: center;
+  max-height: -webkit-fill-available;
   padding: 0 40px;
   .header-container {
     @include container($align-items: stretch, $text-align: left);
