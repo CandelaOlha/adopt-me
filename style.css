@@ -640,5 +640,10 @@ footer .credits-container .back-to-top-icon img {
     width: 50px;
   }
 }
+@media screen and (max-width: 428px) {
+  header {
+    background-image: url("../adopt-me/images/mobile-background-image.jpg");
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

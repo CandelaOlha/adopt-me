@@ -575,3 +575,9 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 428px) {
+  header {
+    background-image: url("../adopt-me/images/mobile-background-image.jpg");
+  }
+}
