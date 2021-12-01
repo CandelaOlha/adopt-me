@@ -238,37 +238,44 @@ header {
     .left-slider-control {
       transform: rotate(180deg);
     }
-    .story-text-container {
-      margin: 10px;
-      width: 460px;
-      .section-title {
-        color: $light-color;
-        font-family: $text-font;
-        font-size: 25px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
+    .story-container {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 20px;
+      .story-text-container {
+        padding: 10px;
+        width: 50%;
+        .section-title {
+          color: $light-color;
+          font-family: $text-font;
+          font-size: 25px;
+          font-weight: 400;
+          letter-spacing: 1px;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+        }
+        .story-title {
+          @include title($title-color: $light-color);
+        }
+        .description {
+          @include text($text-color: $light-color);
+        }
+        .cta {
+          @include cta(
+            $hover-background-color: $stronger-primary-color,
+            $hover-color: $dark-color
+          );
+        }
       }
-      .story-title {
-        @include title($title-color: $light-color);
-      }
-      .description {
-        @include text($text-color: $light-color);
-      }
-      .cta {
-        @include cta(
-          $hover-background-color: $stronger-primary-color,
-          $hover-color: $dark-color
-        );
-      }
-    }
-    .story-image-container {
-      margin: 10px;
-      .story-image {
-        border-radius: 10px;
-        max-width: 486px;
-        width: 100%;
+      .story-image-container {
+        padding: 10px;
+        width: 50%;
+        .story-image {
+          border-radius: 10px;
+          max-width: 100%;
+        }
       }
     }
   }
