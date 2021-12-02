@@ -313,11 +313,20 @@ header .header-container .header-icons .header-icon-item i:hover {
   transform: rotate(180deg);
 }
 .stories-section .section-container .slide {
+  animation: appearance 0.6s ease-in;
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 20px;
+}
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .stories-section .section-container .slide .story-text-container {
   padding: 10px;
