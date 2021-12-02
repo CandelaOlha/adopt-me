@@ -4,7 +4,7 @@
 
 Occasionally I like to go through the entire process of creating a website, from content and design to coding.
 
-This project is the result of looking for some inspiration on Dribbble, creating a quick prototype in Figma and finally, turn my idea into reality through HTML, CSS and a bit of Javascript.
+This homepage is the result of looking for some inspiration on Dribbble, creating a quick prototype in Figma and finally, turn my idea into reality through HTML, CSS and a bit of Javascript.
 
 ## The challenge
 
