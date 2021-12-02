@@ -105,10 +105,13 @@ header {
       display: flex;
       justify-content: space-between;
       padding: 20px;
-      .brand-name {
-        color: $light-color;
-        font-family: "Spartan", sans-serif;
-        font-size: 25px;
+      .homepage-link {
+        text-decoration: none;
+        .brand-name {
+          color: $light-color;
+          font-family: "Spartan", sans-serif;
+          font-size: 25px;
+        }
       }
       .menu {
         display: flex;

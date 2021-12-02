@@ -38,7 +38,10 @@ header .header-container .navbar {
   padding: 20px;
   /* Class to show mobile menu with JS */
 }
-header .header-container .navbar .brand-name {
+header .header-container .navbar .homepage-link {
+  text-decoration: none;
+}
+header .header-container .navbar .homepage-link .brand-name {
   color: #fff;
   font-family: "Spartan", sans-serif;
   font-size: 25px;
