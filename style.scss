@@ -90,7 +90,7 @@ $light-grey-color: #f5f6f7;
 header {
   align-items: center;
   background-image: url("../adopt-me/images/background-image.jpg");
-  background-position: center;
+  background-position: center top;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -150,6 +150,7 @@ header {
         flex-direction: column;
         height: 100vh;
         justify-content: space-evenly;
+        max-height: -webkit-fill-available;
         overflow: hidden;
         padding: 20px 0;
         position: fixed;
@@ -168,7 +169,7 @@ header {
             .mobile-menu-link {
               color: $dark-color;
               font-family: $text-font;
-              font-size: 25px;
+              font-size: 20px;
               padding: 10px 0px;
               text-decoration: none;
             }
@@ -486,6 +487,7 @@ footer {
 @media screen and (max-width: 960px) {
   .stories-section {
     .section-container {
+      flex-direction: column;
       .story-container {
         margin: 0;
         .story-text-container {
@@ -494,6 +496,15 @@ footer {
         }
         .story-image-container {
           width: 100%;
+        }
+      }
+      .slider-control {
+        display: none;
+      }
+      .mobile-slider {
+        display: flex;
+        .slider-control {
+          display: flex;
         }
       }
     }
@@ -537,20 +548,11 @@ footer {
       }
     }
   }
+}
+
+@media screen and (max-width: 586px) {
   .stories-section {
     border: none;
-    .section-container {
-      flex-direction: column;
-      .slider-control {
-        display: none;
-      }
-      .mobile-slider {
-        display: flex;
-        .slider-control {
-          display: flex;
-        }
-      }
-    }
   }
 }
 
