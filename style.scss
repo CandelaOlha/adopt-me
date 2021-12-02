@@ -290,13 +290,14 @@ header {
     @include container($flex-direction: row, $text-align: left);
     .slider-control {
       color: $light-color;
+      cursor: pointer;
       height: 70px;
       width: 70px;
     }
     .left-slider-control {
       transform: rotate(180deg);
     }
-    .story-container {
+    .slide {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
@@ -343,11 +344,12 @@ header {
       margin-top: 20px;
       .slider-control {
         color: $light-color;
+        cursor: poiner;
         height: 50px;
         margin: 0 10px;
         width: 50px;
       }
-      .left-slider-control {
+      .mobile-left-slider-control {
         transform: rotate(180deg);
       }
     }
@@ -491,14 +493,17 @@ footer {
   .stories-section {
     .section-container {
       flex-direction: column;
-      .story-container {
-        margin: 0;
-        .story-text-container {
-          margin-bottom: 60px;
-          width: 100%;
-        }
-        .story-image-container {
-          width: 100%;
+      .slider-container {
+        flex-direction: column;
+        .slide {
+          margin: 0;
+          .story-text-container {
+            margin-bottom: 60px;
+            width: 100%;
+          }
+          .story-image-container {
+            width: 100%;
+          }
         }
       }
       .slider-control {

@@ -305,24 +305,25 @@ header .header-container .header-icons .header-icon-item i:hover {
 }
 .stories-section .section-container .slider-control {
   color: #fff;
+  cursor: pointer;
   height: 70px;
   width: 70px;
 }
 .stories-section .section-container .left-slider-control {
   transform: rotate(180deg);
 }
-.stories-section .section-container .story-container {
+.stories-section .section-container .slide {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 20px;
 }
-.stories-section .section-container .story-container .story-text-container {
+.stories-section .section-container .slide .story-text-container {
   padding: 10px;
   width: 50%;
 }
-.stories-section .section-container .story-container .story-text-container .section-title {
+.stories-section .section-container .slide .story-text-container .section-title {
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 25px;
@@ -331,27 +332,27 @@ header .header-container .header-icons .header-icon-item i:hover {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-.stories-section .section-container .story-container .story-text-container .story-title {
+.stories-section .section-container .slide .story-text-container .story-title {
   color: #fff;
   font-family: "Libre Baskerville", serif;
   font-size: 40px;
   line-height: 1.2;
   margin-bottom: 40px;
 }
-.stories-section .section-container .story-container .story-text-container .story-title span {
+.stories-section .section-container .slide .story-text-container .story-title span {
   background-image: linear-gradient(#fff4bd, #fff4bd);
   background-position: 0 90%;
   background-repeat: no-repeat;
   background-size: 100% 10px;
 }
-.stories-section .section-container .story-container .story-text-container .description {
+.stories-section .section-container .slide .story-text-container .description {
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   line-height: 1.8;
   margin-bottom: 60px;
 }
-.stories-section .section-container .story-container .story-text-container .cta {
+.stories-section .section-container .slide .story-text-container .cta {
   background-color: #fff4bd;
   border-radius: 10px;
   color: #2c2c2c;
@@ -362,15 +363,15 @@ header .header-container .header-icons .header-icon-item i:hover {
   text-decoration: none;
   transition: 0.1s;
 }
-.stories-section .section-container .story-container .story-text-container .cta:hover {
+.stories-section .section-container .slide .story-text-container .cta:hover {
   background-color: #fff0a8;
   color: #2c2c2c;
 }
-.stories-section .section-container .story-container .story-image-container {
+.stories-section .section-container .slide .story-image-container {
   padding: 10px;
   width: 50%;
 }
-.stories-section .section-container .story-container .story-image-container .story-image {
+.stories-section .section-container .slide .story-image-container .story-image {
   border-radius: 10px;
   max-width: 100%;
 }
@@ -382,11 +383,12 @@ header .header-container .header-icons .header-icon-item i:hover {
 }
 .stories-section .section-container .mobile-slider .slider-control {
   color: #fff;
+  cursor: poiner;
   height: 50px;
   margin: 0 10px;
   width: 50px;
 }
-.stories-section .section-container .mobile-slider .left-slider-control {
+.stories-section .section-container .mobile-slider .mobile-left-slider-control {
   transform: rotate(180deg);
 }
 
@@ -588,14 +590,17 @@ footer .credits-container .back-to-top-icon img {
   .stories-section .section-container {
     flex-direction: column;
   }
-  .stories-section .section-container .story-container {
+  .stories-section .section-container .slider-container {
+    flex-direction: column;
+  }
+  .stories-section .section-container .slider-container .slide {
     margin: 0;
   }
-  .stories-section .section-container .story-container .story-text-container {
+  .stories-section .section-container .slider-container .slide .story-text-container {
     margin-bottom: 60px;
     width: 100%;
   }
-  .stories-section .section-container .story-container .story-image-container {
+  .stories-section .section-container .slider-container .slide .story-image-container {
     width: 100%;
   }
   .stories-section .section-container .slider-control {
