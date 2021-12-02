@@ -14,7 +14,7 @@ Every time I face a new project, I propose to learn something new that I have no
 
 Also, I managed to create a functional slider with Javascript to display "Stories worth reading", which are blog articles.
 
-I am still figuring out which is the best way to make an automated slider for the testimonial section, but since that was not the main purpose of this project, I will work on it later.
+I am still figuring out which is the best way to make an automated slider for the testimonial section, but since that was not the main purpose of this project, I decided to work on it later.
 
 ## Technologies
 
