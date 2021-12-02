@@ -4,7 +4,7 @@
 
 Occasionally I like to go through the entire process of creating a website, from content and design to coding.
 
-This project is the result of looking for some inspiration on Dribbble, creating a quick prototype in Figma and finally, turn my idea into reality through HTML, CSS and a bit of Javascript.
+This homepage is the result of looking for some inspiration on Dribbble, creating a quick prototype in Figma and finally, turn my idea into reality through HTML, CSS and a bit of Javascript.
 
 ## The challenge
 
@@ -12,7 +12,9 @@ Every time I face a new project, I propose to learn something new that I have no
 
 [Adopt me](https://candelaolha.github.io/adopt-me/) was the first website I styled using Sass.
 
-Also, I created a functional slider with Javascript to display "Stories worth reading", which are blog articles.
+Also, I managed to create a functional slider with Javascript to display "Stories worth reading", which are blog articles.
+
+I am still figuring out which is the best way to make an automated slider for the testimonial section, but since that was not the main purpose of this project, I decided to work on it later.
 
 ## Technologies
 
