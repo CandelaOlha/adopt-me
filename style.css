@@ -63,12 +63,35 @@ header .header-container .navbar .menu .menu-item .menu-link {
 header .header-container .navbar .menu .menu-item .menu-link:hover {
   color: #2c2c2c;
 }
-header .header-container .navbar .search-button {
+header .header-container .navbar .search-box {
+  display: flex;
+  position: relative;
+}
+header .header-container .navbar .search-box .search-input {
+  border: none;
+  border-radius: 50px;
+  color: #5b616a;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  position: absolute;
+  right: 5px;
+  width: 0;
+}
+header .header-container .navbar .search-box .search-button {
   background-color: #fff;
   border: none;
   border-radius: 50%;
   color: #2c2c2c;
+  height: 50px;
   padding: 16px;
+  width: 50px;
+  z-index: 1;
+}
+header .header-container .navbar .search-box:hover > .search-input {
+  padding: 0 16px;
+  width: auto;
 }
 header .header-container .navbar .hamburger-menu {
   background-color: transparent;
@@ -599,6 +622,11 @@ footer .credits-container .back-to-top-icon img:hover {
 }
 
 /* Responsive styles */
+@media screen and (max-width: 1024px) {
+  header .header-container .navbar .search-box {
+    display: none;
+  }
+}
 @media screen and (max-width: 960px) {
   .stories-section .section-container {
     flex-direction: column;

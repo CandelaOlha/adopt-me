@@ -130,12 +130,35 @@ header {
           }
         }
       }
-      .search-button {
-        background-color: $light-color;
-        border: none;
-        border-radius: 50%;
-        color: $dark-color;
-        padding: 16px;
+      .search-box {
+        display: flex;
+        position: relative;
+        .search-input {
+          border: none;
+          border-radius: 50px;
+          color: $grey-color;
+          font-family: $text-font;
+          font-size: 16px;
+          height: 50px;
+          outline: none;
+          position: absolute;
+          right: 5px;
+          width: 0;
+        }
+        .search-button {
+          background-color: $light-color;
+          border: none;
+          border-radius: 50%;
+          color: $dark-color;
+          height: 50px;
+          padding: 16px;
+          width: 50px;
+          z-index: 1;
+        }
+      }
+      .search-box:hover > .search-input {
+        padding: 0 16px;
+        width: auto;
       }
       .hamburger-menu {
         background-color: transparent;
@@ -501,6 +524,18 @@ footer {
 }
 
 /* Responsive styles */
+
+@media screen and (max-width: 1024px) {
+  header {
+    .header-container {
+      .navbar {
+        .search-box {
+          display: none;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 960px) {
   .stories-section {
