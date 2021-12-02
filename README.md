@@ -12,7 +12,9 @@ Every time I face a new project, I propose to learn something new that I have no
 
 [Adopt me](https://candelaolha.github.io/adopt-me/) was the first website I styled using Sass.
 
-Also, I created a functional slider with Javascript to display "Stories worth reading", which are blog articles.
+Also, I managed to create a functional slider with Javascript to display "Stories worth reading", which are blog articles.
+
+Still figuring out which is the best way to make an automated slider for the testimonial section.
 
 ## Technologies
 
