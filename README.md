@@ -12,7 +12,7 @@ Every time I face a new project, I propose to learn something new that I have no
 
 [Adopt me](https://candelaolha.github.io/adopt-me/) was the first website I styled using Sass.
 
-Also, in the next few days I will be working on adding some functional sliders with Javascript.
+Also, I created a functional slider with Javascript to display "Stories worth reading" which are blog articles.
 
 ## Technologies
 
