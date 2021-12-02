@@ -582,7 +582,11 @@ footer .credits-container .back-to-top-icon img {
   color: #fff;
   height: 70px;
   transform: rotate(-90deg);
+  transition: 0.2s;
   width: 70px;
+}
+footer .credits-container .back-to-top-icon img:hover {
+  transform: rotate(270deg);
 }
 
 /* Responsive styles */

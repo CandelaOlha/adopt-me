@@ -481,7 +481,11 @@ footer {
         color: $light-color;
         height: 70px;
         transform: rotate(-90deg);
+        transition: 0.2s;
         width: 70px;
+      }
+      img:hover {
+        transform: rotate(270deg);
       }
     }
   }
