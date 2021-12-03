@@ -89,7 +89,7 @@ $light-grey-color: #f5f6f7;
 
 header {
   align-items: center;
-  background-image: url("../adopt-me/images/background-image.jpg");
+  background-image: url("images/pets/background-image.jpg");
   background-position: center top;
   display: flex;
   height: 100vh;
@@ -637,6 +637,6 @@ footer {
 
 @media screen and (max-width: 428px) {
   header {
-    background-image: url("../adopt-me/images/mobile-background-image.jpg");
+    background-image: url("images/pets/mobile-background-image.jpg");
   }
 }

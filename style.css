@@ -12,7 +12,7 @@ html {
 /* Header styles */
 header {
   align-items: center;
-  background-image: url("../adopt-me/images/background-image.jpg");
+  background-image: url("images/pets/background-image.jpg");
   background-position: center top;
   display: flex;
   height: 100vh;
@@ -694,7 +694,7 @@ footer .credits-container .back-to-top-icon img:hover {
 }
 @media screen and (max-width: 428px) {
   header {
-    background-image: url("../adopt-me/images/mobile-background-image.jpg");
+    background-image: url("images/pets/mobile-background-image.jpg");
   }
 }
 
