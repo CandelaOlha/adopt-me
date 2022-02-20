@@ -18,7 +18,7 @@ I am still figuring out which is the best way to make an automated slider for th
 
 ## Technologies
 
-- HTML5
+- HTML
 - Sass
 - Javascript
 
